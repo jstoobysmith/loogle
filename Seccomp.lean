@@ -15,6 +15,7 @@ elab_rules : command
 
 
 
+
 #ifEnv "LOOGLE_SECCOMP" then
 @[extern "loogle_seccomp"]
 def Seccomp.enable : BaseIO Unit := return ()

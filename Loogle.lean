@@ -1,7 +1,7 @@
 import Lean.Meta
 import Lake.CLI.Error
 import Lake.Util.Cli
-import PhysLean
+-- import PhysLean
 import Loogle.Find
 
 import Seccomp
@@ -27,7 +27,6 @@ def Parser.runParser (env : Environment) (declName : Name) (input : String)
     Except.error ((s.mkError "end of input").toErrorMsg ictx)
 
 end RunParser
-
 open Lean Core Meta Elab Term Command
 open Loogle
 

@@ -133,7 +133,7 @@ def querylink(query):
 def doclink(hit):
     name = hit["name"]
     modpath = hit["module"].replace(".","/")
-    return f"https://physlean.com/docs/{urllib.parse.quote(modpath)}.html#{urllib.parse.quote(name)}"
+    return f"https://leanprover-community.github.io/mathlib4_docs/{urllib.parse.quote(modpath)}.html#{urllib.parse.quote(name)}"
 
 def zulHit(hit):
     return f"[{hit['name']}]({doclink(hit)})"
@@ -220,7 +220,7 @@ class MyHandler(prometheus_client.MetricsHandler):
             length = int(self.headers.get('content-length'))
             message = json.loads(self.rfile.read(length))
 
-            m = re.search(r'@\*\*loogle\*\*[:,\?]?\s*(.*)$', message['data'], flags = re.MULTILINE)
+            m = re.search('@\*\*loogle\*\*[:,\?]?\s*(.*)$', message['data'], flags = re.MULTILINE)
             if m:
                 query = m.group(1)
             else:
