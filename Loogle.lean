@@ -1,7 +1,7 @@
 import Lean.Meta
 import Lake.CLI.Error
 import Lake.Util.Cli
-import PhysLean
+-- import PhysLean
 import Loogle.Find
 
 import Seccomp
